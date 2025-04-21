@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+    }
+    h2 {
+        @apply text-2xl pb-10;
+    }
+
+    a:hover {
+        @apply text-primary cursor-pointer;
+    } 
+}
+
+@layer components {
+    section {
+        @apply py-10 md:py-14;
+    }
+    
+    .btn {
+        @apply overflow-hidden relative cursor-pointer text-white border-2 border-primary;
+        padding:10px 15px;
+        
+        span {
+            @apply z-20;
+        }
+    }
+
+    .btn-secondary {
+        @apply  text-white bg-secondary border-secondary;
+    }
+        
+    .btn:after {
+        @apply bg-white absolute z-10;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+    }
+
+    .btn:hover:after {
+        left: 120%;
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    
+}
+
+nav a {
+    @apply relative inline-block no-underline;
+    transition: 0.4s;
+  }
+
+nav a::after {
+    content: "";
+    @apply absolute left-0 bottom-0 h-[3px] bg-primary;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+    @apply w-full;
+}
+
+.menu-mobile-fond {
+    left: -100%;
+}
+
+@media (max-width:992px) {
+    .main-menu{
+        left:-100%;
+    }
+}

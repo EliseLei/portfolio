@@ -67,13 +67,3 @@ nav a::after {
 nav a:hover::after {
     @apply w-full;
 }
-
-.menu-mobile-fond {
-    left: -100%;
-}
-
-@media (max-width:992px) {
-    .main-menu{
-        left:-100%;
-    }
-}

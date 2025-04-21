@@ -655,7 +655,7 @@ section {
   position: relative;
 }
 
-.left-\[-100\%\] {
+.-left-full {
   left: -100%;
 }
 
@@ -967,16 +967,6 @@ nav a::after {
 
 nav a:hover::after {
   width: 100%;
-}
-
-.menu-mobile-fond {
-  left: -100%;
-}
-
-@media (max-width:992px) {
-  .main-menu{
-    left:-100%;
-  }
 }
 
 .selection\:bg-primary *::-moz-selection {
